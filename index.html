@@ -179,6 +179,8 @@ h2{font-size:15px;margin:4px 2px 10px;color:var(--bgsub);font-weight:700}
 .preset i{display:inline-flex;width:30px;height:16px;border-radius:99px;overflow:hidden}
 .preset i b{flex:1}
 input[type=range]{width:100%;accent-color:var(--accent)}
+.b-draft{background:#3a3f55;color:#d6dbe9}
+.draftcard{border-style:dashed}
 .me-edit{background:none;border:none;color:var(--wsub);font-size:12px;padding:0;text-decoration:underline}
 </style>
 </head>
@@ -205,8 +207,8 @@ input[type=range]{width:100%;accent-color:var(--accent)}
       <div class="pts"><span id="avail">—</span><small>pt</small></div>
     </div>
     <div class="right">
-      BET中 <b id="staked">0</b> pt<br>
-      順位 <b id="myRank">—</b>
+      BET中 <b id="staked">0</b> pt
+      <span id="rankLine" hidden><br>順位 <b id="myRank">—</b></span>
     </div>
   </div>
   <div class="status" id="status"></div>
@@ -220,7 +222,7 @@ input[type=range]{width:100%;accent-color:var(--accent)}
 
 <nav class="tabs"><div class="in">
   <button data-tab="rounds" class="on">お題</button>
-  <button data-tab="rank">ランキング</button>
+  <button data-tab="rank" hidden>ランキング</button>
   <button data-tab="admin" id="adminTabBtn" hidden>運営</button>
 </div></nav>
 </div>
